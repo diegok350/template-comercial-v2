@@ -1,5 +1,4 @@
-import { AfterViewInit, Component, ElementRef, QueryList, ViewChild, ViewChildren, inject } from '@angular/core';
-import { AnimationService } from '../../../../services/animations/animation.service';
+import { Component, inject } from '@angular/core';
 import { DialogService, DynamicDialogModule, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { ModalDetailComponent } from '../../../../components/detail/modal-detail/modal-detail.component';
 
@@ -11,10 +10,7 @@ import { ModalDetailComponent } from '../../../../components/detail/modal-detail
   styleUrl: './list-process-view.component.scss',
   providers: [DialogService]
 })
-export class ListProcessViewComponent implements AfterViewInit {
-  // Animation
-  @ViewChildren('refAnime') refAnime: QueryList<ElementRef> | any;
-  public animationService = inject(AnimationService);
+export class ListProcessViewComponent {
 
   // Modal
   public dialogService = inject(DialogService);
@@ -32,10 +28,6 @@ export class ListProcessViewComponent implements AfterViewInit {
     { name: 'Facturación', icon: 'fa-solid fa-file-invoice-dollar fs-4 text-primary' },
     { name: 'Pos-Venta', icon: 'fa-solid fa-handshake fs-4 text-primary' }
   ];
-
-  ngAfterViewInit(): void {
-    this.animationService.animateElementsSpeed(this.refAnime);
-  }
 
   showDetail() {
     this.ref = this.dialogService.open(

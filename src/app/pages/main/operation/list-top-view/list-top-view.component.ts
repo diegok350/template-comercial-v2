@@ -1,5 +1,4 @@
-import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren, inject } from '@angular/core';
-import { AnimationService } from '../../../../services/animations/animation.service';
+import { Component, inject } from '@angular/core';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { ModalDetailComponent } from '../../../../components/detail/modal-detail/modal-detail.component';
 
@@ -12,10 +11,7 @@ import { ModalDetailComponent } from '../../../../components/detail/modal-detail
   styleUrl: './list-top-view.component.scss',
   providers: [DialogService]
 })
-export class ListTopViewComponent implements AfterViewInit {
-  // Animation
-  @ViewChildren('refAnime') refAnime: QueryList<ElementRef> | any;
-  public animationService = inject(AnimationService);
+export class ListTopViewComponent {
 
   // Modal
   public dialogService = inject(DialogService);
@@ -28,9 +24,6 @@ export class ListTopViewComponent implements AfterViewInit {
     { name: 'Seguimiento Solicitudes', icon: 'fa-solid fa-clipboard-list fs-4 text-primary' },
   ];
 
-  ngAfterViewInit(): void {
-    this.animationService.animateElementsSpeed(this.refAnime);
-  }
   showDetail() {
     this.ref = this.dialogService.open(
       ModalDetailComponent,

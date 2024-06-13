@@ -6,8 +6,6 @@ import { gsap } from 'gsap';
 })
 export class AnimationService {
 
-  constructor() { }
-
   public animateElementsSpeed(refHtml: any): void {
     setTimeout(() => {
       // Asume que refAnime es una QueryList de elementos que deseas animar.

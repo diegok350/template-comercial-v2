@@ -1,5 +1,4 @@
-import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren, inject } from '@angular/core';
-import { AnimationService } from '../../../../services/animations/animation.service';
+import { Component, inject } from '@angular/core';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { ModalDetailComponent } from '../../../../components/detail/modal-detail/modal-detail.component';
 
@@ -11,10 +10,7 @@ import { ModalDetailComponent } from '../../../../components/detail/modal-detail
   styleUrl: './list-recommended-view.component.scss',
   providers: [DialogService]
 })
-export class ListRecommendedViewComponent implements AfterViewInit {
-  // Animation
-  @ViewChildren('refAnime') refAnime: QueryList<ElementRef> | any;
-  public animationService = inject(AnimationService);
+export class ListRecommendedViewComponent {
 
   // Modal
   public dialogService = inject(DialogService);
@@ -27,10 +23,6 @@ export class ListRecommendedViewComponent implements AfterViewInit {
     { name: 'Mesa de Ayuda', icon: 'fa-solid fa-headset fs-4 text-secondary' },
     { name: 'IDM', icon: 'fa-solid fa-user-shield fs-4 text-secondary' } 
   ];
-
-  ngAfterViewInit(): void {
-    this.animationService.animateElementsSpeed(this.refAnime);
-  }
 
   showDetail() {
     this.ref = this.dialogService.open(
