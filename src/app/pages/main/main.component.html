@@ -4,24 +4,27 @@
           <app-searchbar/>
         </div>
 
-        <div class="col-12 mb-4">
+        <div class="col-12 order-0 order-md-0 mb-4">
             <h6 class="fw-bold">Tus 4 operaciones más visitadas</h6>
 
             <app-list-top-view/>
         </div>
 
-        <div class="col-12">
-            <div class="card mb-4">
+        <div class="col-12 col-md-6 order-1 order-md-1 mb-4">
+            <div class="card">
                 <div class="card-body">
                     <p-accordion [multiple]="true">
                         <p-accordionTab header="Listado de Procesos">
-                            <app-list-process-view></app-list-process-view>
+                            <div class="scroll-container">
+                                <app-list-process-view></app-list-process-view>
+                            </div>
                         </p-accordionTab>
                     </p-accordion>
                 </div>
             </div>
-
-            <div class="card mb-4 bg-secondary">
+        </div>
+        <div class="col-12 order-2 order-md-3 mb-4">
+            <div class="card bg-secondary">
                 <div class="card-body">
                     <p-accordion [multiple]="true" [activeIndex]="[0]">
                         <p-accordionTab>
@@ -46,12 +49,16 @@
                     </p-accordion>
                 </div>
             </div>
+        </div>
 
-            <div class="card mb-4">
+        <div class="col-12 col-md-6 order-3 order-md-2 mb-4">
+            <div class="card">
                 <div class="card-body">
                     <p-accordion [multiple]="true" [activeIndex]="[0]">
                         <p-accordionTab header="Recomendados">
-                            <app-list-recommended-view />
+                            <div class="scroll-container">
+                                <app-list-recommended-view />
+                            </div>
                         </p-accordionTab>
                     </p-accordion>
                 </div>
