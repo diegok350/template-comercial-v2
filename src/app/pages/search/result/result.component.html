@@ -1,0 +1,24 @@
+<section class="fadeIn">
+    @if (searchResults().length > 0 && searchQuery() != '') {
+    <h6 class="mb-3">Resultados de la búsqueda</h6>
+    <app-found [(searchResults)]="searchResults" />
+    }
+
+    @if (noMatches() && searchQuery() != '') {
+    <section class="text-center fadeIn">
+        <div class="row">
+            <div class="col-12 mb-2">
+                <i class="fa-regular fa-file text-medium" style="font-size: 2rem;"></i>
+            </div>
+            <div class="col-12">
+                <span class="text-small text-medium">No se encontraron resultados para tu búsqueda.</span>
+            </div>
+        </div>
+    </section>
+    }
+
+    @if (searchResults().length === 0 && recentSearches().length > 0 && searchQuery() == '') {
+    <h6 class="mb-3">Últimas búsquedas</h6>
+    <app-recent [(recentSearches)]="recentSearches" />
+    }
+</section>

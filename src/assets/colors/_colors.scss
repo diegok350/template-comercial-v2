@@ -1,0 +1,145 @@
+/* Colors Global Light*/
+$font-color: #161616;
+$font-color-hover: #131313;
+$font-header-table: #6c757d;
+$font-body-table: #131313;
+$font-color-inerit: #eeeeee;
+$background-color: #f5f5f5;
+$backgroud-color-focus: #f0f0f0;
+$background-color-card: #ffffff;
+$background-inerit: #f5f5f5;
+$background-color-input: #f9f9f9;
+$box-shadow: none;// 0 0 1.875em 0.5rem rgb(113 113 113 / 17%);
+$box-shadow-nav: 0.0625rem 0.0625rem 1.875rem 0 rgba(128, 128, 128, 0.1);
+$box-shadow-color: rgba(12 12 12 / 19%);
+$border-color: #f5f5f5;
+$input-border: #e3e3e3;
+$input-border-focus: #eeeeee;
+$placeholder: #777777;
+$background-app: #f0f3ff;
+$table-border: #fdfdfd;
+
+/* Root Colors Theme */
+:root {
+    // Rojo Ternium
+    --color-primary: #ff3300;
+	--color-primary-rgb: 255, 51, 1, 0.15;
+    --color-primary-rgb-svg: 255, 51, 1;
+	--color-primary-contrast: #ffffff;
+	--color-primary-tint: #ff4f23;
+
+    // Celeste Ternium
+    --color-secondary: #017da6;
+	--color-secondary-rgb: 1, 125, 166, 0.15;
+	--color-secondary-contrast: #ffffff;
+	--color-secondary-tint: #0289b6;
+
+    //  Azul Oscuro Ternium
+    --color-tertiary: #003366;
+    --color-tertiary-rgb: 0, 51, 102, 0.15;
+    --color-tertiary-contrast: #ffffff;
+    --color-tertiary-tint: #023f7c;
+
+    // Verde Ternium
+    --color-success: #00B451;
+    --color-success-rgb: 0, 180, 81, 0.15;
+    --color-success-contrast: #ffffff;
+    --color-success-tint: #24b465;
+
+    // Naranja Ternium
+    --color-warning: #ff9900;
+    --color-warning-rgb: 255, 153, 0, 0.15;
+    --color-warning-contrast: #050505;
+    --color-warning-tint: #fda41e;
+
+    // Danger
+    --color-danger: #ff2d49;
+    --color-danger-rgb: 255, 45, 73, 0.15;
+    --color-danger-contrast: #ffffff;
+    --color-danger-tint: #ff435c;
+
+    // Dark
+    --color-dark: #050505;
+    --color-dark-rgb: 34, 36, 40, 0.15;
+    --color-dark-contrast: #ffffff;
+    --color-dark-tint: #1f1f1f;
+
+    // Gris Ternium
+    --color-medium: #666666;
+    --color-medium-rgb: 102, 102, 102, 0.15;
+    --color-medium-contrast: #ffffff;
+    --color-medium-tint: #777777;
+
+    // Blanco Ternium
+    --color-light: #ffffff;
+    --color-light-rgb: 209,209,209, 0.15;
+    --color-light-contrast: #050505;
+    --color-light-tint: #e9e9e9;
+
+    // Gris Palido Ternium
+    --color-muted: #D4D4D4;
+    --color-muted-rgb: 212, 212, 212, 0.15;
+    --color-muted-contrast: #050505;
+    --color-muted-tint: #e4e4e4;
+
+    --color-transparent: rgb(0, 0, 0, 0);
+    --color-transparent-contrast: #92949c;
+
+    /* Prime ng colors */
+    --font-color: #161616;
+    --font-color-hover: #131313;
+    --surface-a: #ffffff;
+    --surface-b: #f5f5f5;
+    --surface-c: #e9ecef;
+    --surface-d: #dee2e6;
+    --surface-e: #ffffff;
+    --surface-f: #ffffff;
+    --text-color: #212529;
+    --text-color-secondary: #6c757d;
+    --primary-color: #ff3300;
+    --primary-color-tint: #ff4f23;
+    --primary-color-rgb: 255, 51, 1, 0.15;
+    --primary-color-text: #ffffff;
+    --surface-0: #ffffff;
+    --surface-50: #f9fafb;
+    --surface-100: #f8f9fa;
+    --surface-200: #e9ecef;
+    --surface-300: #dee2e6;
+    --surface-400: #ced4da;
+    --surface-500: #adb5bd;
+    --surface-600: #6c757d;
+    --surface-700: #495057;
+    --surface-800: #343a40;
+    --surface-900: #212529;
+    --gray-50: #f9fafb;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --content-padding: 1.25rem;
+    --inline-spacing: 0.5rem;
+    --border-radius: 4px;
+    --border-color: #e3e3e3;
+    --surface-ground: #efefef;
+    --surface-section: #ffffff;
+    --surface-card: #ffffff;
+    --surface-overlay: #ffffff;
+    --surface-border: #dee2e6;
+    --surface-hover: #e9ecef;
+    --maskbg: rgba(0, 0, 0, 0.4);
+    --focus-ring: 0 0 0 0.2rem rgba(var(--primary-color-rgb));
+    color-scheme: light;
+}
+
+
+/* Bootstrap custom colors */
+$primary: #ff3300;
+$secondary: #01688a;
+
+$theme-colors: (primary: $primary,
+    secondary: $secondary);

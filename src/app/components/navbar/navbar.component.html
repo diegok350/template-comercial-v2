@@ -1,0 +1,32 @@
+<nav id="navbar" class="navbar navbar-expand-lg mb-0 px-2 py-3 bg-light">
+    <div class="container">
+        <div class="flex-container">
+            <div class="flex-items">
+                <h5 class="p-0 m-0 ms-2 fw-bold text-dark">{{title}}</h5>
+            </div>
+        </div>
+
+        <div class="ms-auto">
+            <ul class="navbar-nav">
+                <li class="nav-item me-3">
+                    <div class="flex-container bg-ghost-secondary rounded-pill">
+                        <div class="flex-items me-2 ms-3">
+                            <span>Vista {{view()}}</span>
+                        </div>
+                        <div class="flex-items">
+                            <button class="btn btn-icon btn-nav" aria-current="page" (click)="openViewSidebar()">
+                                <i class="fa-solid fa-sliders"></i>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <button class="btn btn-icon btn-nav" aria-current="page" (click)="openFilterSidebar()">
+                        <i class="fa-regular fa-user"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

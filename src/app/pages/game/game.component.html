@@ -1,0 +1,89 @@
+<div class="bg-secondary vh-100">
+    <div class="container px-5 py-5 bg-secondary">
+        <section class="d-flex align-items-center justify-content-center bg-card-game" #refAnimeTop>
+            <img src="./../../../../assets/images/illustrations/player.svg" alt="Player" style="height: 100%; width: 100%;">
+        </section>
+        
+        <section class="mt-4">
+            <div class="row text-start">
+                <div class="col-12 mb-4">
+                    <div class="flex-container">
+                        <div class="flex-items" #refAnimeLeft>
+                            <h5 class="mb-0 text-light">¡Hola Oscar Medina!</h5>
+                        </div>
+                        <div class="flex-items ms-2" #refAnimeLeft>
+                            <span class="badge bg-warning px-2">
+                                <i class="fa-solid fa-gem me-2" style="font-size: 1rem !important;"></i>
+                                <small class="text-light">Premium</small>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-5">
+                    <div class="flex-container text-start">
+                        <div class="flex-items me-2" #refAnime>
+                            <div class="circle bg-yellow">
+                                <i class="fa-solid fa-bitcoin-sign text-light"></i>
+                            </div>
+                        </div>
+                        <div class="flex-items" #refAnime>
+                            <small class="text-light">Tus puntos</small>
+                            <br>
+                            <span class="fw-bold text-light">11.240</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="line-div"></div>
+                </div>
+                <div class="col-5">
+                    <div class="flex-container text-start">
+                        <div class="flex-items me-2" #refAnime>
+                            <div class="circle bg-tertiary">
+                                <i class="fa-solid fa-trophy text-light"></i>
+                            </div>
+                        </div>
+                        <div class="flex-items" #refAnime>
+                            <small class="text-light">Tu ranking</small>
+                            <br>
+                            <span class="fw-bold text-light">#12</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-12 mt-4">
+                    <h6 class="text-light">Estadisticas</h6>
+                    <section>
+                        @for (item of stats; track $index) {
+                        <section class="mb-3" #refAnime>
+                            <div class="flex-container">
+                                <div class="flex-items me-2">
+                                    <i [class]="item.icon" style="font-size: 1rem !important;"></i>
+                                </div>
+        
+                                <div class="flex-items">
+                                    <small class="text-light">{{item.name}}</small>
+                                </div>
+                            </div>
+                            <div class="progress" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="item.value" aria-valuemin="0"
+                                    aria-valuemax="100" [style.width]="item.value + '%'"></div>
+                            </div>
+                        </section>
+                        }
+                    </section>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mt-5 mb-4">
+            <button type="button" class="btn btn-light w-100 mb-3" #refAnimeTop>
+                <span class="text-secondary">Jugar</span>
+            </button>
+            <button type="button" class="btn btn-outline-light w-100" [routerLink]="['/main']" #refAnimeTop>
+                <span>Volver</span>
+            </button>
+        </section>
+    </div>
+</div>

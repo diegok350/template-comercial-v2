@@ -1,0 +1,19 @@
+.custom-accordion-button:focus {
+    box-shadow: none !important;
+}
+
+.accordion-item {
+    border: none !important;
+}
+
+.accordion-body {
+    background: var(--surface-50);
+    border-radius: 1rem;
+}
+
+.bg-detail {
+    background-color: var(--surface-50);
+}
+.border-bottom-custom{
+    border-bottom: 1px solid var(--surface-200) !important;
+}

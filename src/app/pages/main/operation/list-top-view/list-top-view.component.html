@@ -1,0 +1,19 @@
+<div class="card-container">
+    @for(item of topList; track item.name) {
+    <div class="card shadow-none" (click)="showDetail()">
+        <div class="flex-container">
+            <div class="flex-items me-3">
+                <div class="circle">
+                    <i [class]="item.icon"></i>
+                </div>
+            </div>
+            <div class="flex-items">
+                <div class="flex-items">
+                    <h6 class="card-title mb-0">{{item.name}}</h6>
+                    <p class="text-small mb-0">Descripción de la operación.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+</div>

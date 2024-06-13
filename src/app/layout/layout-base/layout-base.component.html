@@ -1,0 +1,25 @@
+<!-- Navbar -->
+<app-navbar [(sidebarView)]="openView" [(sidebarFilter)]="openFilter" [(view)]="view" />
+
+<!-- Sidebar para los modos de vista -->
+<p-sidebar [(visible)]="openView" [fullScreen]="isMobile" [showCloseIcon]="true" position="left" class="no-header-sidebar">
+    @defer (on viewport) {
+    <app-view-modes [(sidebarView)]="openView" [(view)]="view"/>
+    } @placeholder {
+    <div class="bg-light py-5"></div>
+    }
+</p-sidebar>
+
+<!-- Sidebar para busqueda de clientes -->
+<p-sidebar [(visible)]="openFilter" [fullScreen]="isMobile" [showCloseIcon]="true" position="right" styleClass="p-sidebar-search">
+    @defer (on viewport) {
+    <app-filter-client [(sidebarFilter)]="openFilter"/>
+    } @placeholder {
+    <div class="bg-light py-5"></div>
+    }
+</p-sidebar>
+
+<!-- Contenedor principal -->
+<section class="mt-4 mx-3">
+    <router-outlet />
+</section>

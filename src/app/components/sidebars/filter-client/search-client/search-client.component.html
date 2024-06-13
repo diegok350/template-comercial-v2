@@ -1,0 +1,22 @@
+<div class="flex-container justify-content-between input-flex mb-4">
+    <div class="flex-items w-100" #refAnime>
+        <div class="input-icon">
+            <input type="text" class="form-control" placeholder="Buscar Clientes"
+                [(ngModel)]="textSearch" (input)="handleInput($event)">
+        </div>
+    </div>
+
+    @if (textSearch!='') {
+    <div class="flex-items icon-close" #refAnime>
+        <button type="button" class="btn btn-light search rotateIn" (click)="cleanSearch()">
+            <i class="fa-solid fa-xmark text-medium"></i>
+        </button>
+    </div>
+    }
+    <div class="flex-items me-0" #refAnime>
+        <button type="button" class="btn btn-light search" data-bs-toggle="modal"
+            data-bs-target="#modalVoice">
+            <i class="fa-solid fa-microphone text-primary"></i>
+        </button>
+    </div>
+</div>

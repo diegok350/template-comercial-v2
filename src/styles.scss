@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+/* Import colors */
+@import 'assets/colors/_colors.scss';
+/* Import setting theme */
+@import 'assets/setting/_setting.scss';
+
+/* Import Bootstrap */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+/* Import primeng theme */
+@import 'assets/theme/primeng.scss';
+
+/* Import ternium theme */
+@import 'assets/theme/ternium.scss';
+
+/* Import custom scss */
+@import 'assets/theme/custom.scss';

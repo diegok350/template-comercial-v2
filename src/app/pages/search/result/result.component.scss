@@ -1,0 +1,11 @@
+.btn-light {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.btn-light:hover, .btn-light:focus, .btn-light:active {
+    background-color: var(--color-light-tint) !important;
+    border-color: var(--color-light) !important;
+    color: var(--color-light-contrast) !important;
+    transition: 0.5s ease all;
+}

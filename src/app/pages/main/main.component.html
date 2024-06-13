@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+          <app-searchbar/>
+        </div>
+
+        <div class="col-12 mb-4">
+            <h6 class="fw-bold">Tus 4 operaciones más visitadas</h6>
+
+            <app-list-top-view/>
+        </div>
+
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <p-accordion [multiple]="true">
+                        <p-accordionTab header="Listado de Procesos">
+                            <app-list-process-view></app-list-process-view>
+                        </p-accordionTab>
+                    </p-accordion>
+                </div>
+            </div>
+
+            <div class="card mb-4 bg-secondary">
+                <div class="card-body">
+                    <p-accordion [multiple]="true" [activeIndex]="[0]">
+                        <p-accordionTab>
+                            <ng-template pTemplate="header">
+                               <div class="flex-container">
+                                 <div class="flex-items me-4">
+                                    <span class="fw-bold text-light">
+                                        ¡Hola Oscar Medina!
+                                    </span>
+                                 </div>
+                                 <div class="flex-items">
+                                    <div class="flex-container">
+                                        <a href="#" class="text-light" style="font-weight: 400;">
+                                            Ir al juego
+                                        </a>
+                                    </div>
+                                 </div>
+                               </div>
+                            </ng-template>
+                          <app-gamecard/>
+                        </p-accordionTab>
+                    </p-accordion>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <p-accordion [multiple]="true" [activeIndex]="[0]">
+                        <p-accordionTab header="Recomendados">
+                            <app-list-recommended-view />
+                        </p-accordionTab>
+                    </p-accordion>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

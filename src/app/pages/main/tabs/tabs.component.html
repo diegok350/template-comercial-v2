@@ -1,0 +1,8 @@
+<ul class="nav nav-tabs custom-tabs justify-content-between">
+    @for (item of tabs; track $index) {
+    <li class="nav-item">
+        <a class="nav-link" [class.active]="name() == item.key" (click)="selectTab(item.key)">{{item.name}}</a>
+    </li>
+    }
+</ul>
+

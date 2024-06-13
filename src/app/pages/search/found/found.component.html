@@ -1,0 +1,17 @@
+@for (result of searchResults(); track $index) {
+<div class="card mb-3">
+    <div class="card-body" #refAnime>
+        <div class="flex-container justify-content-between">
+            <div class="flex-items">
+                <span class="fw-bold text-small">{{ result.title }}</span>
+                <p class="mb-0 text-small text-secondary">{{ result.description }}</p>
+            </div>
+            <div class="flex-items">
+                <button type="button" class="btn btn-outline-primary btn-sm" (click)="updateRecentSearches(result);">
+                    Ver Operación
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+}

@@ -1,0 +1,26 @@
+.form-control {
+    background-color: var(--color-light);
+    padding: 0.65rem 0.75rem 0.65rem 2.5rem !important;
+}
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.input-icon input {
+    padding-left: 12px !important;
+}
+
+.search {
+    width: 3rem !important;
+    height: 3rem !important;
+    min-width: 3rem !important;
+}

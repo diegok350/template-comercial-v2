@@ -1,0 +1,43 @@
+<section>
+  <div class="flex-container mb-4">
+    @for (item of selectedClients; track $index) {
+    <div class="flex-item chip mb-2 me-1" #refAnime>
+      <div class="flex-container flex-wrap">
+        <div class="flex-items me-2">
+          <small>{{ item.firstName }} {{ item.lastName }}</small>
+        </div>
+        <div class="flex-items me-1">
+          <span class="remove-chip" (click)="removeClient(item)">
+            <i class="fa-solid fa-xmark text-medium"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+  <div class="client-list">
+    @for (client of filteredClients(); track $index) {
+    <div class="card mb-3">
+      <div class="card-body d-flex align-items-center" #listAnime>
+        <p-checkbox [(ngModel)]="client.selected" [binary]="true" inputId="binary-{{ $index }}"
+          (onChange)="updateSelection(client)"></p-checkbox>
+        <div class="client-info">
+          <h6 class="card-title text-dark">{{ client.firstName }} {{ client.lastName }}</h6>
+          <p class="card-text">{{ client.email }}</p>
+        </div>
+      </div>
+    </div>
+    } @empty {
+      <section class="text-center fadeIn">
+        <div class="row">
+            <div class="col-12 mb-2">
+                <i class="fa-regular fa-file text-medium" style="font-size: 2rem;"></i>
+            </div>
+            <div class="col-12">
+                <span class="text-small text-medium">No se encontraron resultados para tu búsqueda.</span>
+            </div>
+        </div>
+    </section>
+    }
+  </div>
+</section>

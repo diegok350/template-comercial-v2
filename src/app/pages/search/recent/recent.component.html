@@ -1,0 +1,24 @@
+@for (search of recentSearches(); track $index) {
+    <div class="card mb-3">
+        <div class="card-body" #refAnime>
+            <div class="row flex align-items-center">
+                <div class="col-8">
+                    <div class="flex-container">
+                        <div class="flex-items me-3">
+                            <i class="fa-regular fa-clock text-medium"></i>
+                        </div>
+                        <div class="flex-items">
+                            <span class="fw-bold text-small">{{ search.title }}</span>
+                            <p class="mb-0 text-small text-secondary">{{ search.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 text-end">
+                    <button type="button" class="btn btn-icon btn-light" (click)="deleteSearch($index)">
+                        <i class="fa-solid fa-trash-can text-medium"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    }

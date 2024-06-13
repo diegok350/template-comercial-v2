@@ -1,0 +1,41 @@
+<div class="container mb-5 px-4">
+    <div class="row">
+        <div class="col-12 mt-4">
+            <div class="flex-container justify-content-between input-flex mb-4">
+                <div class="flex-items" #refAnime>
+                    <button type="button" class="btn btn-light search" routerLink="/main">
+                        <i class="fa-solid fa-arrow-left text-medium"></i>
+                    </button>
+                </div>
+                <div class="flex-items w-100 me-1" #refAnime>
+                    <div class="input-icon">
+                        <input type="text" class="form-control" placeholder="Buscar"
+                            [(ngModel)]="textSearch" (input)="handleInput($event)">
+                    </div>
+                </div>
+
+                @if (textSearch!='') {
+                <div class="flex-items icon-close" #refAnime>
+                    <button type="button" class="btn btn-light search rotateIn" (click)="cleanSearch()">
+                        <i class="fa-solid fa-xmark text-medium"></i>
+                    </button>
+                </div>
+                }
+                <div class="flex-items me-0" #refAnime>
+                    <button type="button" class="btn btn-light search" data-bs-toggle="modal"
+                        data-bs-target="#modalVoice">
+                        <i class="fa-solid fa-microphone text-primary"></i>
+                    </button>
+                </div>
+            </div>
+
+            @if (result()) {
+                <app-result [(searchQuery)]="searchQuery" [(searchResults)]="searchResults"
+                [(recentSearches)]="recentSearches" [noMatches]="noMatches()"/>
+            }
+
+            <app-voice />
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="card mb-5">
+    <div class="card-body p-0">
+        <div class="card mb-5">
+            <div class="card-body p-0">
+            @defer {
+                @for (item of processesList; track $index) {
+                    <p-accordion [multiple]="true" styleClass="mt-2"  expandIcon="fa-solid fa-chevron-down text-primary" collapseIcon="fa-solid fa-chevron-up text-primary" #refAnime>
+                        <p-accordionTab>
+                            <ng-template pTemplate="header">
+                                <div class="flex-container justify-content-between">
+                                    <div class="flex-items me-3">
+                                        <div class="circle">
+                                            <i [class]="item.icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-items">
+                                        <h6 class="card-title mb-0">{{item.process}}</h6>
+                                    </div>
+                                </div>
+                                <div class="border-bottom mb-3"></div>
+                            </ng-template>
+                            <section class="bg-detail px-3 rounded-3">
+                                @for (child of item.items; track $index) {
+                                    <div class="py-2">
+                                        <span class="text-small text-medium">{{child.name}}</span>
+                                    </div>
+                                    <div class="border-bottom-custom"></div>
+                                    }
+                            </section>
+                        </p-accordionTab>
+                    </p-accordion>
+                    <div class="border-bottom"></div>
+                    }
+              } @loading (after 100ms; minimum 1s) {
+                <section class="bg-light"></section>
+              }
+            </div>
+        </div>
+    </div>
+</div>

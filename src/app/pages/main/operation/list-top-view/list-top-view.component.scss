@@ -1,0 +1,25 @@
+.btn-sm {
+    min-width: 4.5rem !important;
+}
+
+.card-container {
+    display: flex; /* Alineación horizontal de los items */
+    overflow-x: auto; /* Habilita el scroll horizontal cuando el contenido excede el ancho del contenedor */
+    scrollbar-width: none; /* Oculta la barra de desplazamiento para Firefox */
+    -ms-overflow-style: none;  /* Oculta la barra de desplazamiento para IE 10+ */
+  }
+  
+  .card-container::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento para Chrome, Safari y Opera */
+  }
+  
+  .card {
+    flex: 0 0 auto; /* Los elementos no crecen o se encogen, mantienen el ancho definido */
+    width: 280px; /* Ancho de cada card */
+    margin-right: 1.5rem; /* Espacio entre los cards */
+    padding: 20px; /* Espaciado interno para el contenido del card */
+    background-color: #fff; /* Color de fondo para cada card */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra para efecto visual */
+    border-radius: 10px; /* Bordes redondeados para los cards */
+  }
+  

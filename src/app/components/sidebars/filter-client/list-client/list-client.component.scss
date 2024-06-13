@@ -1,0 +1,26 @@
+.filter-section {
+    margin-bottom: 1rem;
+}
+
+.client-list {
+    margin-bottom: 1rem;
+}
+
+.client-info {
+    margin-left: 1rem;
+}
+
+.selected-clients {
+    margin-bottom: 1rem;
+}
+
+.flex-container {
+    flex-wrap: wrap !important;
+}
+
+.chip {
+    background: var(--color-light);
+    padding: 0.4rem 0.6rem;
+    border-radius: 2rem;
+    border: 1px solid var(--color-muted);
+}
