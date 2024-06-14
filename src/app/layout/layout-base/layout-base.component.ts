@@ -8,6 +8,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { CommonModule } from '@angular/common';
 import { MediaQueryService } from '../../services/media/media.service';
 import { Subscription } from 'rxjs';
+import { MiddlewareBarComponent } from '../../components/middleware-bar/middleware-bar.component';
 
 @Component({
   selector: 'app-layout-base',
@@ -17,6 +18,7 @@ import { Subscription } from 'rxjs';
     RouterOutlet,
     NavbarComponent,
     GamebarComponent,
+    MiddlewareBarComponent,
     FilterClientComponent,
     ViewModesComponent,
     SidebarModule
