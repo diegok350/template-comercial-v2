@@ -10,7 +10,7 @@
                 <div class="flex-items w-100 me-1" #refAnime>
                     <div class="input-icon">
                         <input type="text" class="form-control" placeholder="Buscar"
-                            [(ngModel)]="textSearch" (input)="handleInput($event)">
+                            [(ngModel)]="textSearch" (input)="handleInput($event)" #searchInput>
                     </div>
                 </div>
 

@@ -1133,13 +1133,6 @@ p-dropdown.ng-dirty.ng-invalid>.p-dropdown {
   z-index: 1;
 }
 
-.p-inputgroup>.p-component:focus~label,
-.p-inputgroup>.p-element:focus~label,
-.p-inputgroup>.p-inputwrapper>.p-component>.p-inputtext:focus~label,
-.p-inputgroup>.p-float-label>.p-component:focus~label {
-  z-index: 1;
-}
-
 .p-inputgroup-addon:first-child,
 .p-inputgroup button:first-child,
 .p-inputgroup input:first-child,
@@ -4875,9 +4868,9 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
   margin-right: 0.5rem;
   position: absolute;
   right: 1rem;
-  background: var(--surface-50);
-  height: 2rem;
-  width: 2rem;
+  // background: var(--surface-50);
+  height: 3rem;
+  width: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;

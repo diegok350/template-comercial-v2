@@ -18,6 +18,7 @@ import { RouterModule } from '@angular/router';
 })
 export default class SearchComponent implements OnInit, AfterViewInit {
   @ViewChildren('refAnime') refAnime: QueryList<ElementRef> | any;
+  @ViewChild('searchInput') searchInput: ElementRef | any;
 
   public animationService = inject(AnimationService);
   private localService = inject(LocalService);
@@ -53,6 +54,7 @@ export default class SearchComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.animationService.animateElementsBottomTop(this.refAnime);
+    this.searchInput.nativeElement.focus();
   }
 
   resetInput() {

@@ -1,6 +1,6 @@
 @for(item of recommendedList; track item.name) {
 <section class="mb-3">
-    <div class="flex-container justify-content-between" (click)="showDetail()">
+    <div class="flex-container justify-content-between">
         <div class="flex-items me-3">
             <div class="flex-container">
                 <div class="flex-items me-3">
@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="flex-items">
-            <button type="button" class="btn btn-action btn-icon" (click)="showDetail()">
+            <button type="button" class="btn btn-action btn-icon">
                 <i class="fa-solid fa-angle-right text-primary"></i>
             </button>
         </div>
